@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import { TextField, Button} from '@material-ui/core';
 import '../CSS/Auth.css';
+import {auth,db} from '../../services/firebase';
+
 function SignUP() {
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
@@ -42,7 +44,17 @@ function SignUP() {
         };
     }
     const handleSignUp = ()=>{
-      
+        auth.createUserWithEmailAndPassword(email,password);
+        
+        // auth.createUserwithEmailAndPassword(email, password)
+        // .catch(function(error){
+        //     var errorCode = error.code;
+        //     var errorMessage = error.Message;
+        //     console.log(errorCode, errorMessage);
+        // })
+        // .then(function (){
+        //     console.log("created succces fully")
+        // });
     }
     return (
         <div className="signup">
