@@ -5,13 +5,23 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+<<<<<<< HEAD
+=======
+    "@material-ui/styles": "^4.10.0",
+>>>>>>> f2de2aedacfc0228255ba3cf32ff8568a9fc2acf
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "material-auto-rotating-carousel": "^3.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+<<<<<<< HEAD
     "react-scripts": "3.4.3"
+=======
+    "react-scripts": "^3.4.3",
+    "react-swipeable-views": "^0.13.9"
+>>>>>>> f2de2aedacfc0228255ba3cf32ff8568a9fc2acf
   },
   "scripts": {
     "start": "react-scripts start",
