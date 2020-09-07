@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a{
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+  text-decoration: none;
+
+}
+
+
+.nav{
+  background-color: whitesmoke;
+  height:15vh;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav__logo{
+  width: 100px;
+  font-size: 50px;
+
+}
+
+.nav__navbar{
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: auto;
+  font-size: 30px;
+  height: 100%;
+}
+
+.nav__navbar li {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 15px 0px 15px;
+
+}
+
+
+
+.nav__navbar li p{
+  position: relative;
+  width: max-content;
+  transition: border .5s linear
+}
+
+.nav__navbar li p::after{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  content: '';
+  z-index: 1;
+  height: 100%;
+  width: 0%;
+  border-bottom: 5px solid #2FF75D;
+  transition: width .2s ease-in;
+}
+
+.nav__navbar p:hover::after{
+  width: 100%;
+}
+
+.nav__navbar button{
+  background: none;
+  border: none;
+  background-color:  orange;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  color:black
+}
+
+.home__banner{
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.home__banner img{
+  height: 100%;
+  width: 100%;
+}
+
+.banner__introduction{
+  font-size: 1.5vw;
+  position: absolute;
+  padding: 20px;
+  top: 0px;
+  left: 20px;
+  height: 100%;
+  width: 40%;
+  background-color: #3AE7F091;
+  color: white;
+  text-shadow: 0px 0px 5px #6e3227;
+}
+
+.banner__introduction h1{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.banner__introduction p{
+  margin-bottom: 20px;
+}
+
+.banner__introduction button{
+  display: flex;
+  margin-left: auto;
+  margin-right: 30px;
+  padding: 15px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+
+/* #298DD9 */
+/* #3AE7F0 */
+/* #29D99A */
+/* #2FF75D */
