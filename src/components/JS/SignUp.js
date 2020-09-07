@@ -42,15 +42,7 @@ function SignUP() {
         };
     }
     const handleSignUp = ()=>{
-        firebase.auth().createUserwithEmailAndPassword(email, password)
-        .catch(function(error){
-            var errorCode = error.code;
-            var errorMessage = error.Message;
-            console.log(errorCode, errorMessage);
-        })
-        .then(function (){
-            console.log("created succces fully")
-        });
+      
     }
     return (
         <div className="signup">

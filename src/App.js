@@ -17,8 +17,7 @@ function App() {
   return (
     <div className="App">
 
-     <Auth collapsed={collapsed}/>
-      <Button onClick={changeCollapse}>collapse</Button>
+   
 
       <Router>
       <Switch>

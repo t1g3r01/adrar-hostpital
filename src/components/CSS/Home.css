@@ -133,7 +133,12 @@ ul{
   color: white;
 }
 
-
+.home{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
 /* #298DD9 */
 /* #3AE7F0 */
 /* #29D99A */

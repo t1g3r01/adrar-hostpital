@@ -1,7 +1,8 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import {Link} from "react-router-dom"
 import '../CSS/Home.css'
 import Staff from './Staff'
+import Auth from './Auth'
 
 function Home() {
   useEffect(()=>{
@@ -14,6 +15,10 @@ function Home() {
      }
      e.currentTarget.style.borderBottom = '5px solid #2FF75D'
   }
+  const [auth, setAuth]=useState(false);
+  const handleAuth = ()=>{
+    setAuth(!auth);
+  }
   return (
     <div className="home">
       <div className="nav">
@@ -23,9 +28,10 @@ function Home() {
         <ul className="nav__navbar">
           <li><Link to="/"><p id='home' onClick = {(e) => {select(e)}} className='nav__route' >Home</p></Link></li>
           <li><Link to="/Ads" ><p onClick = {(e) => {select(e)}} className='nav__route'>Ads</p></Link></li>
-          <li><button>Sign in</button></li>
+          <li><button onClick={handleAuth}>Sign in</button></li>
         </ul>
       </div>
+      <Auth collapsed={auth} />
       <div className="home__banner">
         <img src="https://i.ytimg.com/vi/CShAQmlOEWg/maxresdefault.jpg" alt=""/>
         <div className="banner__introduction">
