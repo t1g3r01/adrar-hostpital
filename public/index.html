@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -27,6 +29,20 @@
     <title>React App</title>
   </head>
   <body>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBZXpmbpSgkfP47AelIx712LHNqNidtrRo",
+        authDomain: "messenger-univ-app.firebaseapp.com",
+        databaseURL: "https://messenger-univ-app.firebaseio.com",
+        projectId: "messenger-univ-app",
+        storageBucket: "messenger-univ-app.appspot.com",
+        messagingSenderId: "18723741552",
+        appId: "1:18723741552:web:92c250ec457b94407d39b5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +55,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
   </body>
 </html>
