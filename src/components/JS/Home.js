@@ -37,6 +37,7 @@ function Home() {
     currentUser();
   }, [auth.currentUser]);
   console.log(auth.currentUser, authBtn,"#");
+  console.log(auth.currentUser, authBtn,"#");
   auth.onAuthStateChanged((user) => {
     if (user)
      {
