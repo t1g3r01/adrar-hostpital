@@ -1,11 +1,12 @@
 .auth_container{
-    background-image: url("https://pixabay.com/get/54e0d44a4e50ac14f6da8c7dda2f3e7d113adbed4e5074407c2b78d29e4ac5_1280.jpg");
+    background-image: url("../IMG/login_bg.jpg");
+    object-fit: cover;
     justify-items: center;
     align-items: center;
     
     background-color: whitesmoke;
     height: 600px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -40,11 +41,19 @@
 }
 
 .switch{
+    background-color: #3333;
+    border: 2px solid black;
+    color: black;
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Roboto',sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: center;
     align-items: center;
 }
+
+
 .auth_content{
     margin: 20px;
     display: flex;
