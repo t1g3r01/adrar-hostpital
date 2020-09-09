@@ -1,0 +1,50 @@
+.form__container{
+  min-width: 500px;
+  height: 400px;
+  width: 60%;
+  margin: auto;
+  padding: 50px;
+  padding-top: 0px;
+  background: #afafe1;
+  flex-direction: column;
+  margin-bottom: 40px;
+  box-shadow: -2px 2px 5px 2px #8888;
+
+}
+
+.form__container form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: max-content
+}
+
+.form__input{
+  margin: 20px;
+  margin-left: 0px;
+}
+
+.form__container textarea{
+  height: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #8888;
+  width: 400px;
+}
+
+.form__container button{
+  width: 70px;
+  padding: 10px;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #0000ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}

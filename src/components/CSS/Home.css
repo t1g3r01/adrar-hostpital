@@ -21,11 +21,12 @@ ul{
 
 .nav{
   background-color: whitesmoke;
-  height:15vh;
+  height:10vh;
   display: flex;
   align-items: center;
   padding-left: 15px;
   padding-right: 15px;
+
 }
 
 .nav__logo{
@@ -40,7 +41,7 @@ ul{
   align-items: center;
   justify-content: flex-start;
   margin-left: auto;
-  font-size: 30px;
+  font-size: 20px ;
   height: 100%;
 }
 
@@ -85,7 +86,7 @@ ul{
   padding: 15px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
   color:black
 }
 
@@ -108,9 +109,8 @@ ul{
   left: 20px;
   height: 100%;
   width: 40%;
-  background-color: #3AE7F091;
-  color: white;
-  text-shadow: 0px 0px 5px #6e3227;
+  background-color: #afafe19c;
+
 }
 
 .banner__introduction h1{
@@ -133,12 +133,88 @@ ul{
   color: white;
 }
 
-.home{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  
+.home__staff{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 40px;
+
 }
+
+/*  */
+
+
+.footer {
+    margin-top: 50px;
+    background-size: cover;
+    color: white;
+    background-color: #15062b;
+    padding-bottom: 30px;
+}
+
+.footer-body {
+    display: flex;
+}
+
+.loc-title {
+    display: flex;
+    padding: 30px 30px 30px 30px;
+    color: #cfd0d2;
+}
+
+.loc-title svg {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.loaction {
+    width: 60%;
+}
+
+.map-container {
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    height: 400px;
+}
+
+.contacts {
+    width: 40%;
+    padding-top: 100px;
+}
+
+.footer__contact {
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+.footer__contact p {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.footer__contact svg {
+    padding-right: 20px;
+    color: #1fe04c !important;
+    font-size: 40px;
+}
+
+.social {
+    text-align: center;
+    font-size: 30px;
+    color: #1fe04c;
+}
+
+.social svg {
+  margin: 10px 10px 10px 10px;
+}
+
+
 /* #298DD9 */
 /* #3AE7F0 */
 /* #29D99A */

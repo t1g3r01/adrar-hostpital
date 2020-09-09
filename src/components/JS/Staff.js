@@ -1,42 +1,106 @@
-import React from 'react'
-import {AutoRotatingCarousel} from 'material-auto-rotating-carousel';
-
+import React,{useState} from 'react'
+import Avatar from '@material-ui/core/Avatar';
+import '../CSS/Staff.css'
 // const Slide = require('./Slide').default;
+import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+
+
+
+const staff =[
+  {
+    id: 1,
+    name: 'smito1',
+    job:'khdmto1',
+    face:'#',
+    email: '#',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    id: 2,
+    name: 'smito2',
+    job:'khdmto2',
+    face:'#',
+    email: '#',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    id: 3,
+    name: 'smito3',
+    job:'khdmto3',
+    face:'#',
+    email: '#',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+]
+
 function Staff() {
-
-  const {red, blue, green} = require('@material-ui/core/colors');
-  const Button = require('@material-ui/core/Button').default;
-
+  const [condition,setCondition] = useState(true)
+  const [selected,setSelected] = useState(staff[0])
+  console.log('staff:',staff);
+  const style = (e) => {
+    let members = document.getElementsByClassName('staff__member')
+    setCondition(false)
+    // document.getElementsByClassName('staff__detail')[0].style.display = 'none'
+    // document.getElementsByClassName('staff__detail')[0].style.display = 'block'
+    for (var i = 0; i < members.length; i++) {
+      members[i].style.opacity = '0.7'
+    }
+    e.currentTarget.style.opacity = '1'
+  }
   return (
-    <div style={{
-      position: 'relative',
-      width: '100%',
-      height: 500
-    }}>
+  <>
+    <h1 className="staff__heading">Our Staff</h1>
+    <div className="staff">
+     <div className="staff__select">
+       {
+         staff.map((member)=>(
+           <div onClick={(e) => {setSelected(member);style(e)}} className="staff__member">
+             <Avatar>H</Avatar>
+             <div className="member__info">
+               <p>{member.name}</p>
+               <p>{member.job}</p>
+             </div>
+           </div>
+         ))
+       }
+     </div>
+     <TransitionGroup className="staff__container">
+         <CSSTransition
+           key={selected.id}
+           timeout={200}
+           classNames="staff__de"
+         >
+        <div  className="staff__detail">
+          <div className="staff__top">
+            <Avatar>H</Avatar>
+            <div className="staff__intro">
+              <h1>{selected.name}</h1>
+              <h3>{selected.job}</h3>
+            </div>
+          </div>
+          <div className="staff__bottom">
+            <p>{selected.description}</p>
+          </div>
+          <div className="staff__contact">
+           <div className="contact">
+             <a href={selected.face}><FacebookIcon></FacebookIcon></a>
+           </div>
+           <div className="contact">
+             <a href={selected.email}><EmailIcon></EmailIcon></a>
+           </div>
+          </div>
+        </div>
+      </CSSTransition>
+    </TransitionGroup>
 
-    <AutoRotatingCarousel label='Get started'  style={{
-        position: 'absolute'
-      }}>
-      <div className="staff__slide"></div>
-      <div className="staff__slide"></div>
-      <div className="staff__slide"></div>
-      {/* <Slide media={<img src = 'http://www.icons101.com/icon_png/size_256/id_79394/youtube.png' />} mediaBackgroundStyle={{
-          backgroundColor: red[400]
-        }} style={{
-          backgroundColor: red[600]
-        }} title='This is a very cool feature' subtitle='Just using this will blow your mind.'/>
-      <Slide media={<img src = 'http://www.icons101.com/icon_png/size_256/id_80975/GoogleInbox.png' />} mediaBackgroundStyle={{
-          backgroundColor: blue[400]
-        }} style={{
-          backgroundColor: blue[600]
-        }} title='Ever wanted to be popular?' subtitle='Well just mix two colors and your are good to go!'/>
-      <Slide media={<img src = 'http://www.icons101.com/icon_png/size_256/id_76704/Google_Settings.png' />} mediaBackgroundStyle={{
-          backgroundColor: green[400]
-        }} style={{
-          backgroundColor: green[600]
-        }} title='May the force be with you' subtitle='The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe.'/> */}
-    </AutoRotatingCarousel>
-  </div>)
+
+
+
+    </div>
+    </>  )
 }
 
 export default Staff
